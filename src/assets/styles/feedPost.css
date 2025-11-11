@@ -1,0 +1,79 @@
+.feed-container {
+  background: #f5f5f5;
+  padding: 121px 0 40px;
+  transition: background-color 0.75s ease-out;
+}
+.feed-container a {
+  color: inherit;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+.col-feed {
+  flex: 1 1 calc(33.333% - 24px);
+  padding: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+.feed {
+  margin-bottom: 80px;
+  page-break-inside: avoid;
+}
+.video-box {
+  width: 100%;
+  position: relative;
+  transition: border-radius 0.3s ease-out;
+  z-index: 1;
+  overflow: hidden;
+  margin-bottom: 21px;
+}
+.video-box video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.video-box:hover {
+  border-radius: 15px;
+}
+.feed-title {
+  font-family: "GT Walsheim Rg", sans-serif;
+  display: block;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 13px;
+}
+.feed-text {
+  font-size: 18px;
+  font-family: "GT Walsheim Th", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 23px;
+}
+.feed-container p {
+  margin: 0 0 1em;
+}
+.feed-container p a {
+  font-family: "GT Walsheim Th", sans-serif;
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .col-feed {
+    flex: 1 1 calc(50% - 24px);
+  }
+}
+@media (max-width: 640px) {
+  .feed-container {
+    padding: 80px 0 30px;
+  }
+  .col-feed {
+    flex: 1 1 100%;
+  }
+}

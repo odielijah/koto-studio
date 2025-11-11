@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import "tailwindcss";
+
+@font-face {
+  font-family: "GT Walsheim Rg";
+  src: url("../fonts/GTWalsheimTrial-Rg.woff2") format("woff2"),
+    url("../fonts/GTWalsheimTrial-Rg.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Walsheim Lt";
+  src: url("../fonts/GTWalsheimTrial-Lt.woff2") format("woff2"),
+    url("../fonts/GTWalsheimTrial-Lt.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GT Walsheim Th";
+  src: url("../fonts/GTWalsheimTrial-Th.woff2") format("woff2"),
+    url("../fonts/GTWalsheimTrial-Th.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  background: #000;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media (max-width: 767px) {
+  #main {
+      padding-top: 78px;
+  }
+}
+
+.gt-rg {
+  font-family: "GT Walsheim Rg", "Poppins", Arial, sans-serif;
+}
+.gt-lt {
+  font-family: "GT Walsheim Lt", "Poppins", Arial, sans-serif;
+}
+.gt-th {
+  font-family: "GT Walsheim Th", "Poppins", Arial, sans-serif;
+}
+
+/* Removing whitespace */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Responsiveness */
+@media (max-width: 767px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
