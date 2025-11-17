@@ -26,12 +26,6 @@
   font-display: swap;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  outline: none;
-}
 body {
   background: #000;
 }
@@ -47,7 +41,7 @@ body {
 
 @media (max-width: 767px) {
   #main {
-      padding-top: 78px;
+    padding-top: 78px;
   }
 }
 
@@ -59,6 +53,9 @@ body {
 }
 .gt-th {
   font-family: "GT Walsheim Th", "Poppins", Arial, sans-serif;
+}
+.space-mono {
+  font-family: "Space Mono", monospace;
 }
 
 /* Removing whitespace */
