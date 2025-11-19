@@ -27,7 +27,7 @@ header .nav-panel .container {
   font-size: 14px;
 }
 .nav-panel-links {
-  flex-direction: row;
+  /* flex-direction: row; */
   flex-wrap: nowrap;
   letter-spacing: -0.02em;
   line-height: 1.2;

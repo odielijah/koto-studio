@@ -119,7 +119,7 @@
 }
 @media (max-width: 767px) {
   .contact {
-    padding-top: 132px;
+    padding-top: 0px;
   }
   .contact h1 {
     margin-bottom: 86px;

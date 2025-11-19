@@ -1,8 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "../../assets/styles/slider.css";
 import polkadotVideo from "../../assets/videos/polkadot-video.mp4";
 import amazonVideo from "../../assets/videos/amazon-video.mp4";
 import microsoftVideo from "../../assets/videos/microsoft-video.mp4";
@@ -11,6 +8,9 @@ import lyftVideo from "../../assets/videos/lyft-video.mp4";
 import freetradeVideo from "../../assets/videos/freetrade-video.mp4";
 import fluzImage from "../../assets/images/fluz-image.jpeg";
 import callOfDutyVideo from "../../assets/videos/call-of-duty-video.mp4";
+import "swiper/css";
+import "swiper/css/navigation";
+import "../../assets/styles/slider.css";
 
 const slides = [
   {
@@ -94,13 +94,19 @@ export default function Slider() {
         initialSlide={1}
         grabCursor={true}
         spaceBetween={-27}
+        autoHeight={true}
         className="koto-swiper"
         onSlideChangeTransitionStart={updateSlideStyles}
         onAfterInit={(swiper) => updateSlideStyles(swiper)} // apply style on load
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="koto-slide">
-            <a href={slide.link} target="_blank" rel="noopener noreferrer" className="slide-link">
+            <a
+              href={slide.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="slide-link"
+            >
               {slide.type === "video" ? (
                 <video autoPlay loop muted playsInline className="slide-media">
                   <source src={slide.src} type="video/mp4" />

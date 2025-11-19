@@ -1,8 +1,15 @@
+import { useRef } from "react";
 import "../../assets/styles/hero.css";
 
-export default function HeroSection() {
+export default function HeroSection({ nextSectionRef }) {
+  const scrollToNextSection = () => {
+    if (nextSectionRef.current) {
+      nextSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="bg-black text-white h-[100vh] flex items-center justify-center flex-col relative">
+    <section className="bg-black text-white h-[100vh] mt-[-80px] flex items-center justify-center flex-col relative">
       <div className="container text-left">
         <p className="custom-mid-text gt-lt text-[30px] md:text-[51px] font-[300] max-w-[1200px] mx-auto z-[99] tracking-[-.64px] leading-[1.2]">
           <span>Optimists building</span>{" "}
@@ -15,7 +22,10 @@ export default function HeroSection() {
           <span>defining tomorrow.</span>
         </p>
 
-        <div className="absolute bottom-10">
+        <div
+          className="absolute bottom-10 cursor-pointer"
+          onClick={scrollToNextSection}
+        >
           <div className="hero-navigation">
             <svg
               xmlns="http://www.w3.org/2000/svg"

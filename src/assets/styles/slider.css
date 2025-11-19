@@ -17,6 +17,8 @@
   
 }
 
+
+
 /* Swiper slides */
 .koto-swiper .swiper-slide {
   height: 700px;
@@ -49,6 +51,8 @@
   transform-origin: 50% var(--pivot-y, 50%);
   transition: opacity 0.5s ease-in-out, transform 0.3s ease-out;
   width: 100%;
+  /* min-height: 700px;       
+  max-height: 700px; */
 }
 
 /* Next & prev slides */
@@ -120,6 +124,7 @@
 /* Swiper navigation buttons */
 .swiper-button-prev,
 .swiper-button-next {
+  display: none;
   height: auto;
   position: absolute;
   top: 5.5% !important;
@@ -189,6 +194,9 @@
       padding: 120px 0;
   }
 }
+.koto-swiper .swiper-slide-active {
+}
+
 
 
 
