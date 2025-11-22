@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 
-export default function WorkFilter({ categories, filter, setFilter, visibleCount }) {
+export default function WorkFilter({
+  categories,
+  filter,
+  setFilter,
+  visibleCount,
+}) {
   const [mobileActive, setMobileActive] = useState(false);
 
   // Sync mobile overlay with filter changes
@@ -14,14 +19,8 @@ export default function WorkFilter({ categories, filter, setFilter, visibleCount
   }, [mobileActive]);
 
   const handleCategoryClick = (cat) => {
-    if (cat === filter) {
-      // toggle overlay if clicking active filter
-      setMobileActive(!mobileActive);
-    } else {
-      // switch filter and ensure overlay is visible
-      setFilter(cat);
-      setMobileActive(true);
-    }
+    setFilter(cat);
+    setMobileActive(false); // immediately close overlay on click
   };
 
   return (
@@ -49,7 +48,9 @@ export default function WorkFilter({ categories, filter, setFilter, visibleCount
               handleCategoryClick(cat);
             }}
             className={`work-filter-item ${
-              filter === cat ? "active" : "text-gray-400 hover:text-white"
+              filter === cat
+                ? "active"
+                : "text-gray-400 hover:text-white max-[1200px]:text-white"
             }`}
           >
             {cat}
