@@ -1,12 +1,9 @@
 import { useState } from "react";
 
-export default function PartnersFilter({ filters, partners }) {
+export default function PartnersFilter({ filters, categories }) {
   const [active, setActive] = useState("Partners");
 
-  const filtered =
-    active === "Partners"
-      ? partners
-      : partners.filter((p) => p.category === active);
+  const currentList = categories[active] || [];
 
   return (
     <div className="container">
@@ -16,7 +13,7 @@ export default function PartnersFilter({ filters, partners }) {
             <li key={filter}>
               <button
                 onClick={() => setActive(filter)}
-                className={`border py-[5px] px-[16px] rounded-[9999px] ${
+                className={`border py-[5px] uppercase px-[16px] rounded-[9999px] ${
                   active === filter
                     ? "bg-white text-black"
                     : "hover:bg-white hover:text-black"
@@ -31,8 +28,8 @@ export default function PartnersFilter({ filters, partners }) {
 
       {/* Logos grid */}
       <div className="mt-8 pt-[54px] pb-[102px] flex justify-center">
-        <div className="grid grid-cols-4 max-md:grid-cols-2 gap-[25px] max-w-[1130px]">
-          {filtered.map((partner) => (
+        <div className="flex justify-evenly items-center flex-wrap w-full max-md:grid max-md:grid-cols-2 max-md:gap-[20px] gap-0 max-w-[1130px]">
+          {currentList.map((partner) => (
             <img
               key={partner.name}
               src={partner.image}
@@ -40,7 +37,7 @@ export default function PartnersFilter({ filters, partners }) {
             />
           ))}
 
-          {filtered.length === 0 && (
+          {currentList.length === 0 && (
             <p className="text-[20px] opacity-70 text-center w-full gt-th">
               No partners here yet. Check back soon.
             </p>

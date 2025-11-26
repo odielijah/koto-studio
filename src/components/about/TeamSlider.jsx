@@ -1,28 +1,48 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade } from "swiper/modules";
+import { useState, useEffect } from "react";
 
-export default function TeamSlider({ slides, swiperRef, setActiveIndex }) {
+export default function TeamSlider({ slides, activeIndex }) {
+  const [fadeIndex, setFadeIndex] = useState(activeIndex);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    setFade(false);
+    const timeout = setTimeout(() => {
+      setFadeIndex(activeIndex);
+      setFade(true);
+    }, 200);
+    return () => clearTimeout(timeout);
+  }, [activeIndex]);
+
+  const member = slides[fadeIndex];
+
   return (
-    <Swiper
-      modules={[Autoplay, EffectFade]}
-      slidesPerView={1}
-      loop
-      autoplay={{ delay: 3000 }}
-      onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-      onBeforeInit={(swiper) => (swiperRef.current = swiper)}
-      className="max-w-[404px] w-full"
+    <div
+      className="
+        w-full 
+        max-w-[404px] 
+        h-auto
+        max-[574px]:max-w-full 
+        bg-white/10 
+        overflow-hidden 
+        flex items-center justify-center 
+        relative
+      "
     >
-      {slides.map((item, idx) => (
-        <SwiperSlide key={idx}>
-          <div className="h-[460px] bg-white/50">
-            {item.slideImage ? (
-              <img src={item.slideImage} className="w-full h-full" />
-            ) : (
-              <div className="w-full h-full bg-black/30" />
-            )}
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+      {member?.slideImage ? (
+        <img
+          src={member.slideImage}
+          alt={member.name}
+          className={`w-full h-auto object-cover transition-opacity duration-500 ${
+            fade ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ) : (
+        <div
+          className={`w-full h-full bg-black/40 transition-opacity duration-500 ${
+            fade ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      )}
+    </div>
   );
 }

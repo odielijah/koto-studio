@@ -14,11 +14,16 @@ export default function AboutModule({ module }) {
         </h2>
 
         <div
-          className={`tracking-[-.02em] max-w-[886px] gt-th ${
-            module.largeText
-              ? "text-[62px] max-md:text-[36px] leading-[1.1]"
-              : "text-[36px] leading-[1]"
-          }`}
+          className={`
+    tracking-[-.02em]
+    gt-th
+    ${
+      module.largeText
+        ? "text-[60px] max-md:text-[36px] leading-[1.1]"
+        : "text-[36px] leading-[1]"
+    }
+  `}
+          style={{ maxWidth: module.maxWidth }}
         >
           {module.heading}
         </div>
@@ -29,7 +34,7 @@ export default function AboutModule({ module }) {
 
       {/* Collaborators */}
       {module.number === "3.0" && (
-        <PartnersFilter filters={module.filters} partners={module.partners} />
+        <PartnersFilter filters={module.filters} categories={module.categories} />
       )}
 
       {/* Team */}

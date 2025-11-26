@@ -1,24 +1,19 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import TeamSlider from "./TeamSlider.jsx";
 import TeamList from "./TeamList.jsx";
+import "../../assets/styles/team-section.css";
 
 export default function TeamSection({ teamSlides }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const swiperRef = useRef(null);
 
   return (
-    <div className="pt-[80px]">
-      <div className="container flex flex-col lg:flex-row gap-[40px] items-center justify-center">
-        <TeamSlider
-          slides={teamSlides}
-          swiperRef={swiperRef}
-          setActiveIndex={setActiveIndex}
-        />
-
+    <div className="container pt-[80px]">
+      <div className="team flex max-[574px]:flex-col flex-row gap-[80px] flex-nowrap items-center justify-evenly">
+        <TeamSlider slides={teamSlides} activeIndex={activeIndex} />
         <TeamList
           slides={teamSlides}
           activeIndex={activeIndex}
-          swiperRef={swiperRef}
+          setActiveIndex={setActiveIndex}
         />
       </div>
     </div>

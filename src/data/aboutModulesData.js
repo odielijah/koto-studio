@@ -1,13 +1,214 @@
-import Activision from "../assets/images/Activision.svg";
-import AirBnB from "../assets/images/AirBnB.svg";
-import Amazon from "../assets/images/Amazon.svg";
-import CocaCola from "../assets/images/CocaCola.svg";
-import Google from "../assets/images/Google.svg";
-import Meta from "../assets/images/Meta.svg";
-import Spotify from "../assets/images/Spotify.svg";
-import Uber from "../assets/images/Uber.svg";
+import Activision from "../assets/images/filter-images/Activision.svg";
+import AirBnB from "../assets/images/filter-images/AirBnB.svg";
+import Amazon from "../assets/images/filter-images/Amazon.svg";
+import CocaCola from "../assets/images/filter-images/CocaCola.svg";
+import Google from "../assets/images/filter-images/Google.svg";
+import Meta from "../assets/images/filter-images/Meta.svg";
+import Spotify from "../assets/images/filter-images/Spotify.svg";
+import Uber from "../assets/images/filter-images/Uber.svg";
+
+import AllTrue from "../assets/images/filter-images/AllTrue.svg";
+import Dermatica from "../assets/images/filter-images/Dermatica.svg";
+import Meridian from "../assets/images/filter-images/Meridian.svg";
+import MiniLuxe from "../assets/images/filter-images/MiniLuxe.svg";
+
+import Aquemia from "../assets/images/filter-images/Aquemia.svg";
+import Owkin from "../assets/images/filter-images/Owkin.svg";
+import Replay from "../assets/images/filter-images/Replay.svg";
+import Tropic from "../assets/images/filter-images/Tropic.svg";
+
+import Fanta from "../assets/images/filter-images/Fanta.svg";
+import Mars from "../assets/images/filter-images/Mars.svg";
+import VitaminWater from "../assets/images/filter-images/Vitamin-water.svg";
+
+import Antic from "../assets/images/filter-images/Antic.svg";
+import Polkadot from "../assets/images/filter-images/Polkadot.svg";
+import Sock from "../assets/images/filter-images/Sock.svg";
+import Solana from "../assets/images/filter-images/Solana.svg";
+import XBTO from "../assets/images/filter-images/XBTO.svg";
+import Zonda from "../assets/images/filter-images/Zonda.svg";
+
+import Dojo from "../assets/images/filter-images/Class-Dojo.svg";
+import CourseHero from "../assets/images/filter-images/Course-Hero.svg";
+import Multiverse from "../assets/images/filter-images/Multiverse.svg";
+import Reforge from "../assets/images/filter-images/Reforge.svg";
+
+import AmazonMusic from "../assets/images/filter-images/Amazon-Music.svg";
+import Amp from "../assets/images/filter-images/Amp.svg";
+import Netflix from "../assets/images/filter-images/Netflix.svg";
+
+import Everlane from "../assets/images/filter-images/Everlane.svg";
+import Nike from "../assets/images/filter-images/Nike.svg";
+import NoLand from "../assets/images/filter-images/No-Land.svg";
+import Raw from "../assets/images/filter-images/Raw.svg";
+
+import Bolt from "../assets/images/filter-images/Bolt.svg";
+import Fluz from "../assets/images/filter-images/Fluz-Logo.svg";
+import Paypal from "../assets/images/filter-images/Paypal.svg";
+import Pleo from "../assets/images/filter-images/Pleo.svg";
+import Qonto from "../assets/images/filter-images/Qonto.svg";
+import Titan from "../assets/images/filter-images/Titan.svg";
+import Venmo from "../assets/images/filter-images/Venmo.svg";
+import Zip from "../assets/images/filter-images/Zip.svg";
+
+import BettaFish from "../assets/images/filter-images/Bettafsh.svg";
+import Bowery from "../assets/images/filter-images/Bowery.svg";
+import Meatable from "../assets/images/filter-images/Meatable.svg";
+import Meati from "../assets/images/filter-images/Meati.svg";
+import Misfits from "../assets/images/filter-images/Misfits.svg";
+import UberEats from "../assets/images/filter-images/Uber-Eats.svg";
+
+import CallOfDuty from "../assets/images/filter-images/Call-of-Duty.svg";
+import Elodie from "../assets/images/filter-images/Elodie.svg";
+import ZLeague from "../assets/images/filter-images/Z-League.svg";
+
+import Flo from "../assets/images/filter-images/Flo.svg";
+import Huma from "../assets/images/filter-images/Huma.svg";
+import Livi from "../assets/images/filter-images/Kry.svg";
+
+import AirTasker from "../assets/images/filter-images/AirTasker.svg";
+import BackMarket from "../assets/images/filter-images/Mars.svg";
+import Fiverr from "../assets/images/filter-images/Fiverr.svg";
+import GoDaddy from "../assets/images/filter-images/GoDaddy.svg";
+
+import Deployed from "../assets/images/filter-images/Deployed.svg";
+import Frontify from "../assets/images/filter-images/Frontify.svg";
+import Gusto from "../assets/images/filter-images/Gusto.svg";
+import Hook from "../assets/images/filter-images/Hook.svg";
+
+import Discord from "../assets/images/filter-images/Discord.svg";
+import WalkieTalkie from "../assets/images/filter-images/Walkie-Talkie.svg";
+import Whatsapp from "../assets/images/filter-images/Whatsapp.svg";
+import Yubo from "../assets/images/filter-images/Yubo.svg";
+
+import BlaBlaCar from "../assets/images/filter-images/BlaBlaCar.svg";
+import Hilton from "../assets/images/filter-images/Hilton.svg";
+import LoveHolidays from "../assets/images/filter-images/LoveHolidays.svg";
+
+import A16Crypto from "../assets/images/filter-images/a16z-Crypto.svg";
+import A16Z from "../assets/images/filter-images/A16Z.svg";
+import Blossom from "../assets/images/filter-images/Blossom-1.svg";
+import BuildersUnion from "../assets/images/filter-images/Builders-Union.svg";
 
 import screwNew from "../assets/images/screw-new.png";
+import Gustini from "../assets/images/gustini.png";
+import IrlToUrl from "../assets/images/irl-to-url.jpeg";
+
+const categories = {
+  Partners: [
+    { name: "Activision", image: Activision },
+    { name: "AirBnB", image: AirBnB },
+    { name: "Amazon", image: Amazon },
+    { name: "Coca-cola", image: CocaCola },
+    { name: "Google", image: Google },
+    { name: "Meta", image: Meta },
+    { name: "Spotify", image: Spotify },
+    { name: "Uber", image: Uber },
+  ],
+  Beauty: [
+    { name: "AllTrue", image: AllTrue },
+    { name: "Dermatica", image: Dermatica },
+    { name: "Meridian", image: Meridian },
+    { name: "MiniLuxe", image: MiniLuxe },
+  ],
+  Biotech: [
+    { name: "Aqemia", image: Aquemia },
+    { name: "Owkin", image: Owkin },
+    { name: "Replay", image: Replay },
+    { name: "Tropic", image: Tropic },
+  ],
+  CPG: [
+    { name: "Coca-cola", image: CocaCola },
+    { name: "Fanta", image: Fanta },
+    { name: "Mars", image: Mars },
+    { name: "Vitamin Water", image: VitaminWater },
+  ],
+  Crypto: [
+    { name: "Antic", image: Antic },
+    { name: "Polkadot", image: Polkadot },
+    { name: "Sock", image: Sock },
+    { name: "Solana", image: Solana },
+    { name: "XBTO", image: XBTO },
+    { name: "Zonda", image: Zonda },
+  ],
+  EDTech: [
+    { name: "Dojo", image: Dojo },
+    { name: "Course Hero", image: CourseHero },
+    { name: "Multiverse", image: Multiverse },
+    { name: "Reforge", image: Reforge },
+  ],
+  Entertainment: [
+    { name: "Amazon Music", image: AmazonMusic },
+    { name: "Amp", image: Amp },
+    { name: "Netflix", image: Netflix },
+    { name: "Spotify", image: Spotify },
+  ],
+  Fashion: [
+    { name: "Everlane", image: Everlane },
+    { name: "Nike", image: Nike },
+    { name: "No Land", image: NoLand },
+    { name: "Raw", image: Raw },
+  ],
+  Fintech: [
+    { name: "Bolt", image: Bolt },
+    { name: "Fluz", image: Fluz },
+    { name: "Paypal", image: Paypal },
+    { name: "Pleo", image: Pleo },
+    { name: "Qonto", image: Qonto },
+    { name: "Titan", image: Titan },
+    { name: "Venmo", image: Venmo },
+    { name: "Zip", image: Zip },
+  ],
+  "Future of Food": [
+    { name: "Betta Fish", image: BettaFish },
+    { name: "Bowery", image: Bowery },
+    { name: "Meatable", image: Meatable },
+    { name: "Meati", image: Meati },
+    { name: "Misfits", image: Misfits },
+    { name: "UberEats", image: UberEats },
+  ],
+  Gaming: [
+    { name: "Activision", image: Activision },
+    { name: "Call Of Duty", image: CallOfDuty },
+    { name: "Elodie", image: Elodie },
+    { name: "Z League", image: ZLeague },
+  ],
+  Healthcare: [
+    { name: "Flo", image: Flo },
+    { name: "Huma", image: Huma },
+    { name: "Livi", image: Livi },
+  ],
+  Marketplaces: [
+    { name: "Air Tasker", image: AirTasker },
+    { name: "Back Market", image: BackMarket },
+    { name: "Fiverr", image: Fiverr },
+    { name: "Go Daddy", image: GoDaddy },
+  ],
+  Saas: [
+    { name: "Deployed", image: Deployed },
+    { name: "Frontify", image: Frontify },
+    { name: "Gusto", image: Gusto },
+    { name: "Hook", image: Hook },
+  ],
+  Social: [
+    { name: "Discord", image: Discord },
+    { name: "Walkie Talkie", image: WalkieTalkie },
+    { name: "Whatsapp", image: Whatsapp },
+    { name: "Yubo", image: Yubo },
+  ],
+  Travel: [
+    { name: "AirBnB", image: AirBnB },
+    { name: "BlaBlaCar", image: BlaBlaCar },
+    { name: "Hilton", image: Hilton },
+    { name: "Love Holidays", image: LoveHolidays },
+  ],
+  "Venture Capital": [
+    { name: "A16z Crypto ", image: A16Crypto },
+    { name: "A16z", image: A16Z },
+    { name: "Blossom", image: Blossom },
+    { name: "Builders Union", image: BuildersUnion },
+  ],
+};
 
 const modules = [
   {
@@ -15,6 +216,7 @@ const modules = [
     title: "Who are we?",
     largeText: true,
     heading: `We’re optimists building brand and digital for the most impactful companies of today and the founders defining tomorrow.`,
+    maxWidth: "1076px",
     hr: false,
   },
 
@@ -22,6 +224,7 @@ const modules = [
     number: "2.0",
     title: "How?",
     heading: `We work how you work: adapting our process to meet yours—with co-creation non-negotiable.`,
+    maxWidth: "886px",
     hr: true,
     skills: [
       {
@@ -61,6 +264,7 @@ const modules = [
     number: "3.0",
     title: "Collaborators",
     heading: `We partner with businesses of any size or sector: from first round of funding to every subsequent stage of growth.`,
+    maxWidth: "770px",
     hr: true,
     filters: [
       "Partners",
@@ -81,76 +285,67 @@ const modules = [
       "Travel",
       "Venture Capital",
     ],
-    partners: [
-      { name: "Activision", category: "Gaming", image: Activision },
-      { name: "AirBnB", category: "Travel", image: AirBnB },
-      { name: "Amazon", category: "Fashion", image: Amazon },
-      { name: "Coca-cola", category: "CPG", image: CocaCola },
-      { name: "Google", category: "Fintech", image: Google },
-      { name: "Meta", category: "Social", image: Meta },
-      { name: "Spotify", category: "Entertainment", image: Spotify },
-      { name: "Uber", category: "Travel", image: Uber },
-    ],
+    categories: categories,
   },
-
   {
     number: "4.0",
     title: "Team",
     heading: `We are a group of curious optimists building world-class brands.`,
+    maxWidth: "600px",
     hr: true,
     teamSlides: [
       {
-        slideImage: "",
+        slideImage: Gustini,
         name: "Fred North",
         role: "Creative Director",
       },
       {
-        slideImage: "",
+        slideImage: IrlToUrl,
         name: "Harrison Dew",
         role: "Designer Director",
       },
       {
-        slideImage: "",
+        slideImage: Gustini,
         name: "Ingrid Tagel",
-        role: "Assistant Management Accountant",
+        role: "Management Accountant",
       },
       {
-        slideImage: "",
+        slideImage: IrlToUrl,
         name: "Jake Khan",
         role: "Strategist",
       },
       {
-        slideImage: "",
+        slideImage: Gustini,
         name: "Joe Ling",
         role: "Creative Director",
       },
       {
-        slideImage: "",
+        slideImage: IrlToUrl,
         name: "Joshua Osborne",
         role: "Art Director",
       },
       {
-        slideImage: "",
+        slideImage: Gustini,
         name: "Katey Harvey",
         role: "Managing Director",
       },
       {
-        slideImage: "",
+        slideImage: IrlToUrl,
         name: "Kyle Toukatley",
         role: "Senior Designer",
       },
       {
-        slideImage: "",
+        slideImage: Gustini,
         name: "Lily Dent",
         role: "Designer",
       },
       {
-        slideImage: "",
+        slideImage: IrlToUrl,
         name: "Marius Trinkunas",
         role: "Designer",
       },
       {
-        slideImage: "",
+        slideImage: Gustini,
         name: "Phoebe Roberts",
         role: "Client Executive",
       },
