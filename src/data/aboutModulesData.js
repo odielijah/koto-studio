@@ -78,7 +78,7 @@ import Hook from "../assets/images/filter-images/Hook.svg";
 
 import Discord from "../assets/images/filter-images/Discord.svg";
 import WalkieTalkie from "../assets/images/filter-images/Walkie-Talkie.svg";
-import Whatsapp from "../assets/images/filter-images/Whatsapp.svg";
+import Whatsapp from "../assets/images/filter-images/WhatsApp.svg";
 import Yubo from "../assets/images/filter-images/Yubo.svg";
 
 import BlaBlaCar from "../assets/images/filter-images/BlaBlaCar.svg";
