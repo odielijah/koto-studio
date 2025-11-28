@@ -32,20 +32,19 @@ export default function TeamList({ slides, activeIndex, setActiveIndex }) {
         autoplay={{ delay: 3000 }}
         modules={[Autoplay]}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-        className="name-list relative overflow-hidden"
-        spaceBetween={16}
-        autoHeight={true}
-        allowTouchMove={true}
-        simulateTouch={true}
-        noSwiping={true}
-        noSwipingClass="no-swipe"
+        className="name-list relative overflow-hidden pointer-events-none"
+        spaceBetween={16}    
+        autoHeight={true}    
         centeredSlides={!pinTop}
-        style={{ height: `${slidesPerView * 76}px` }}
+        // optional: keeps Swiper height sized to slidesPerView * slideHeight
+        style={{ height: `${slidesPerView * 76}px` }} 
       >
         {slides.map((member, idx) => (
           <SwiperSlide key={idx}>
             {/* Give each slide a fixed height so spaceBetween is visible */}
-            <div className="h-[72px] flex flex-col justify-center w-full px-2">
+            <div
+              className="h-[72px] flex flex-col justify-center w-full px-2"
+            >
               <span className="gt-th text-[36px] max-md:text-[24px] block leading-none">
                 {member.name}
               </span>
