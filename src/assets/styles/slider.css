@@ -14,8 +14,6 @@
 .koto-swiper {
   perspective: 1000px;
   width: 80vw;
-  max-width: 1130px;
-  
 }
 
 /* Swiper slides */
@@ -50,7 +48,7 @@
   transform-origin: 50% var(--pivot-y, 50%);
   transition: opacity 0.5s ease-in-out, transform 0.3s ease-out;
   width: 100%;
-  min-height: 700px;       
+  min-height: 700px;
   max-height: 700px;
 }
 
@@ -97,7 +95,6 @@
   color: #fff;
   transition: opacity 0.3s ease;
   pointer-events: none;
-
   left: 100%;
   margin-left: 24px;
   padding: 0;
@@ -123,13 +120,23 @@
 /* Swiper navigation buttons */
 .swiper-button-prev,
 .swiper-button-next {
-  display: none;
+  display: block;
   height: auto;
   position: absolute;
-  top: 5.5% !important;
-  width: 14vw;
-  z-index: 1;
+  top: 55%;
+  transform: translateY(-35%);
+  color: transparent;
+  width: 8vw;
+  z-index: 5;
+  height: 100vh;
   opacity: 0;
+}
+
+.swiper-button-prev {
+  left: -7% !important;
+}
+.swiper-button-next {
+  right: -7% !important;
 }
 
 /* Keep equal spacing between slides */
@@ -140,10 +147,10 @@
 /* Responsive styles */
 .koto-swiper {
   width: 90vw;
-  height: clamp(300px, 60vh, 700px);  
+  height: clamp(300px, 60vh, 700px);
 }
 .koto-swiper .swiper-slide {
-  flex: 0 0 auto; 
+  flex: 0 0 auto;
   width: clamp(200px, 80vw, 1130px);
 }
 @media (max-width: 767px) {
@@ -172,31 +179,9 @@
   }
 }
 
-.koto-slider {
-  position: relative; /* ensure buttons are positioned relative to slider */
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  top: 0;                   /* align to top of slider */
-  bottom: 0;                /* stretch to bottom of slider */
-  height: 100%;             /* full slider height */
-  width: 60px;              /* adjust width as needed */
-  z-index: 5;
-  opacity: 1;               /* make visible */
-}
-
-.swiper-button-prev {
-  left: 0;                  /* stick to left edge of container */
-}
-
-.swiper-button-next {
-  right: 0;                 /* stick to right edge of container */
-}
-
 @media (min-width: 768px) {
   .home-slider {
-      padding: 120px 0;
+    padding: 120px 0;
   }
 }
 @media (max-width: 630px) {
@@ -209,5 +194,3 @@
     max-height: 250px !important;
   }
 }
-
-

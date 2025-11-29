@@ -95,7 +95,7 @@ export default function Slider() {
         grabCursor={true}
         spaceBetween={-27}
         autoHeight={true}
-        className="koto-swiper"
+        className="koto-swiper relative"
         onSlideChangeTransitionStart={updateSlideStyles}
         onAfterInit={(swiper) => updateSlideStyles(swiper)} // apply style on load
       >

@@ -14,7 +14,7 @@ export default function Header({ trigger }) {
     { name: "Contact", path: "/contact" },
   ];
 
-  const footerLinks = [
+  const socialLinks = [
     { name: "Twitter", url: "#" },
     { name: "Instagram", url: "#" },
     { name: "LinkedIn", url: "#" },
@@ -133,10 +133,10 @@ export default function Header({ trigger }) {
               })}
             </div>
 
-            {/* Footer links */}
+            {/* social links */}
             <div>
               <li className="pt-5 mt-5 border-white border-t-[.5px] cursor-pointer flex flex-col gap-3">
-                {footerLinks.map((link, index) => (
+                {socialLinks.map((link, index) => (
                   <a
                     key={index}
                     href={link.url}
