@@ -3,9 +3,7 @@ export default function JobFilter({
   filters,
   openingsFilter,
   setOpeningsFilter,
-  openingsLocation,
   setOpeningsLocation,
-  openingsDepartment,
   setOpeningsDepartment,
   activeDropdown,
   setActiveDropdown,
@@ -73,7 +71,7 @@ export default function JobFilter({
             </button>
 
             {activeDropdown === filter && (
-              <div className="absolute top-full left-0 mt-[8px] w-[200px] rounded-[16px] border border-white/20 bg-black/90 backdrop-blur-sm p-[8px] flex flex-col z-[999]">
+              <div className="absolute top-full left-0 mt-[8px] w-[150px] rounded-[16px] border border-white/20 bg-black/90 backdrop-blur-sm p-[8px] flex flex-col z-[999]">
                 {dropdownOptions.map((option) => (
                   <button
                     key={option}

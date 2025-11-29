@@ -5,8 +5,8 @@ import ContactAdditional from "../components/contact/ContactAdditional.jsx";
 
 export default function Contact() {
   return (
-    <div className="container py-20 bg-black text-white">
-      <section className="contact py-20 bg-black text-white">
+    <div className="container py-20 max-md:pb-0 bg-black text-white">
+      <section className="contact py-20 max-md:pb-0 bg-black text-white">
         <h1 className="max-md:leading-[1.2] leading-[1.1] max-md:tracking-[-.64px] tracking-[-2.48px] gt-lt">
           We are five creative studios across<span className="hidden md:inline"><br /></span> the globe. Let’s start working together.
         </h1>

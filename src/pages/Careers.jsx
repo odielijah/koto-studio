@@ -137,7 +137,7 @@ export default function Careers() {
             )}
 
             {/* Filters */}
-            {section.filters?.length > 0 && (
+            {section.filters?.length > 0 && section.id !== "benefits" && (
               <JobFilter
                 sectionId={section.id}
                 filters={section.filters}
@@ -159,13 +159,36 @@ export default function Careers() {
               <JobList jobs={filteredJobs} />
             )}
 
-            {/* Benefits */}
+            {/* Benefits Section */}
             {section.id === "benefits" && (
-              <BenefitsAccordion
-                benefits={benefitsData[benefitsFilter]}
-                openAccordion={openAccordion}
-                setOpenAccordion={setOpenAccordion}
-              />
+              <>
+                {/* Benefits filter buttons */}
+                <div className="flex gap-[4px] pb-[24px] flex-wrap">
+                  {Object.keys(benefitsData).map((filter) => (
+                    <button
+                      key={filter}
+                      onClick={() => {
+                        setBenefitsFilter(filter);
+                        setOpenAccordion(null); // reset accordion when switching filter
+                      }}
+                      className={`px-[16px] py-[5px] border space-mono cursor-pointer uppercase text-[11px] rounded-[9999em] transition-all duration-300 ${
+                        benefitsFilter === filter
+                          ? "bg-white text-black border-white"
+                          : "bg-black/30 text-white border border-white/20 hover:bg-white hover:text-black"
+                      }`}
+                    >
+                      {filter}
+                    </button>
+                  ))}
+                </div>
+
+                {/* Benefits accordion */}
+                <BenefitsAccordion
+                  benefits={benefitsData[benefitsFilter]}
+                  openAccordion={openAccordion}
+                  setOpenAccordion={setOpenAccordion}
+                />
+              </>
             )}
           </div>
         </section>
