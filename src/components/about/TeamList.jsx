@@ -4,55 +4,47 @@ import "swiper/css";
 import { useState, useEffect, useRef } from "react";
 
 export default function TeamList({ slides, activeIndex, setActiveIndex }) {
-  const swiperRef = useRef(null);
   const [slidesPerView, setSlidesPerView] = useState(7);
-  const [centeredSlides, setCenteredSlides] = useState(true);
+  const [pinTop, setPinTop] = useState(false);
 
-  // Update slidesPerView and centeredSlides on resize
   useEffect(() => {
-    const handleResize = () => {
+    const updateSlides = () => {
       if (window.innerWidth >= 768) {
         setSlidesPerView(7);
-        setCenteredSlides(true);
+        setPinTop(false); // center mode
       } else {
         setSlidesPerView(4);
-        setCenteredSlides(false);
+        setPinTop(true); // top-pin on smaller screens
       }
-
-      // Ensure swiper updates properly after resize
-      setTimeout(() => {
-        swiperRef.current?.swiper.update();
-        swiperRef.current?.swiper.autoplay.start();
-      }, 50);
     };
 
-    handleResize(); // initial setup
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    updateSlides();
+    window.addEventListener("resize", updateSlides);
+    return () => window.removeEventListener("resize", updateSlides);
   }, []);
 
   return (
-    <div className="max-w-[404px] w-full relative">
+    <div className="max-w-[404px] h-auto w-full relative">
       <Swiper
-        ref={swiperRef}
         direction="vertical"
-        loop={true}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
         slidesPerView={slidesPerView}
-        centeredSlides={centeredSlides}
-        spaceBetween={16}
+        loop
+        autoplay={{ delay: 3000 }}
         modules={[Autoplay]}
-        autoHeight={true}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
         className="name-list relative overflow-hidden pointer-events-none"
-        style={{ height: `${slidesPerView * 76}px` }}
+        spaceBetween={16}    
+        autoHeight={true}    
+        centeredSlides={!pinTop}
+        // optional: keeps Swiper height sized to slidesPerView * slideHeight
+        style={{ height: `${slidesPerView * 76}px` }} 
       >
         {slides.map((member, idx) => (
           <SwiperSlide key={idx}>
-            <div className="h-[72px] flex flex-col justify-center w-full px-2">
+            {/* Give each slide a fixed height so spaceBetween is visible */}
+            <div
+              className="h-[72px] flex flex-col justify-center w-full px-2"
+            >
               <span className="gt-th text-[36px] max-md:text-[24px] block leading-none">
                 {member.name}
               </span>
