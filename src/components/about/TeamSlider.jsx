@@ -19,6 +19,7 @@ export default function TeamSlider({ slides, activeIndex }) {
       <AnimatePresence mode="wait">
         {member?.slideImage ? (
           <motion.img
+            loading="lazy"
             key={member.slideImage}
             src={member.slideImage}
             alt={member.name}
