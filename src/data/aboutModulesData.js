@@ -109,15 +109,15 @@ import Guideline1 from "../assets/images/Dandy_Guidelines-1-704x396.png";
 import Guideline2 from "../assets/images/DeExtinction03_Guidelines-1-704x396.jpg";
 import Guideline3 from "../assets/images/Antic03_Guidelines-1-704x396.png";
 
-import AmyHayden from "../assets/images/Amy-Hayden_Global-C-Suite-EA-London-768x883.webp";
-import AngelaYu from "../assets/images/Angela-Yu_Sr-Designer-LA-1-768x883.webp";
+import AmyHayden from "../assets/images/Amy-Hayden_Global-C-Suite-EA-London-768x883.jpg";
+import AngelaYu from "../assets/images/Angela-Yu_Sr-Designer-LA-1-768x883.jpg";
 import CourtneyGordon from "../assets/images/Courtney-Gordon_Client-Director-Berlin-768x883.jpg";
 import IsobelGreen from "../assets/images/Isobel-Green_Studio-CO-EA-London-768x883.jpg";
 import JakeKhan from "../assets/images/Jake-Khan_Junior-Copywriter-London-768x883.jpg";
 import JoshuaOsborne from "../assets/images/Joshua-Osborne_Art-Director-London-768x883.jpg";
 import KyleToukatly from "../assets/images/Kyle-Toukatly_Sr-Designer-LA-768x883.jpg";
 import LaurenFogelstrom from "../assets/images/Lauren-Fogelstrom_Client-Manager-LA-768x883.jpg";
-import ZoeSchneider from "../assets/images/Zoe-Schneider_Designer-LA-768x883.webp";
+import ZoeSchneider from "../assets/images/Zoe-Schneider_Designer-LA-768x883.jpg";
 import NoPotrait from "../assets/images/Koto_NoPortrait-768x883.png";
 
 const categories = {
