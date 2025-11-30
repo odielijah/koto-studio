@@ -1,19 +1,7 @@
-import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function TeamSlider({ slides, activeIndex }) {
-  const [fadeIndex, setFadeIndex] = useState(activeIndex);
-  const [fade, setFade] = useState(true);
-
-  useEffect(() => {
-    setFade(false);
-    const timeout = setTimeout(() => {
-      setFadeIndex(activeIndex);
-      setFade(true);
-    }, 350);
-    return () => clearTimeout(timeout);
-  }, [activeIndex]);
-
-  const member = slides[fadeIndex];
+  const member = slides[activeIndex];
 
   return (
     <div
@@ -28,21 +16,29 @@ export default function TeamSlider({ slides, activeIndex }) {
         relative
       "
     >
-      {member?.slideImage ? (
-        <img
-          src={member.slideImage}
-          alt={member.name}
-          className={`w-full h-auto object-cover transition-opacity duration-500 ${
-            fade ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      ) : (
-        <div
-          className={`w-full h-full bg-black/40 transition-opacity duration-500 ${
-            fade ? "opacity-100" : "opacity-0"
-          }`}
-        />
-      )}
+      <AnimatePresence mode="wait">
+        {member?.slideImage ? (
+          <motion.img
+            key={member.slideImage}
+            src={member.slideImage}
+            alt={member.name}
+            className="w-full h-auto object-cover"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+          />
+        ) : (
+          <motion.div
+            key="empty"
+            className="w-full h-full bg-black/40"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.45, ease: "easeInOut" }}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
