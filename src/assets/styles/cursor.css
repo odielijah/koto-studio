@@ -8,21 +8,20 @@
   transform: translate(-50%, -50%) scale(1);
   transition: width 0.2s ease, height 0.2s ease, transform 0.2s ease,
     background 0.2s ease, filter 0.2s ease, opacity 0.2s ease;
-  z-index: 9999;
+  z-index: 999;
 }
 
 /* Default hoverable: big, soft, translucent, negative filter */
 .custom-cursor.cursor-hover {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   background: #ffe800;
-  opacity: 0.5;
-  filter: invert(1);
+  mix-blend-mode: difference;
 }
 
 /* Text inside cursor */
 .cursor-text {
-  font-size: 8px;
+  font-size: 9px;
   font-family: "Space Mono", monospace;
   color: black;
   text-transform: uppercase;
@@ -41,3 +40,65 @@
   align-items: center;
   justify-content: center;
 }
+
+/* PROJECT CURSOR STYLE */
+.custom-cursor.cursor-project {
+  width: auto;
+  height: 30px;
+  background: #ffe800;
+  padding: 0 24px;
+  border-radius: 9999px;
+  opacity: 1;
+  filter: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  transition: width 0.25s ease, height 0.25s ease, padding 0.25s ease,
+    border-radius 0.25s ease, transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.25s ease;
+}
+
+.cursor-project-wrapper {
+  display: flex;
+  gap: 4px;
+  pointer-events: none;
+}
+
+.cursor-tooltip {
+  font-size: 12px;
+  font-family: "Space Mono", monospace;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.custom-cursor.cursor-project {
+  width: auto;
+  height: 30px;
+  background: #ffe800;
+  border-radius: 9999px;
+  opacity: 1;
+  filter: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  transition: 
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    width 0.25s ease, 
+    height 0.25s ease, 
+    padding 0.25s ease,
+    border-radius 0.25s ease,
+    opacity 0.25s ease;
+    mix-blend-mode: normal;
+}
+
+/* On hover, stretch horizontally from center */
+.custom-cursor.cursor-project.hover {
+  transform: translate(-50%, -50%);
+  width: auto;
+}
+
+

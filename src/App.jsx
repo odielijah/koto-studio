@@ -12,31 +12,33 @@ import Cursor from "./components/Cursor.jsx";
 
 function App() {
   return (
-    <PageLoader>
-      <TransitionProvider>
-        {(trigger) => (
-          <>
-            {/* Custom cursor */}
-            <Cursor />
-            <Header trigger={trigger} />
+    <>
+      {/* Custom cursor */}
+      <Cursor />
+      <PageLoader>
+        <TransitionProvider>
+          {(trigger) => (
+            <>
+              <Header trigger={trigger} />
 
-            <main id="main" className="bg-black">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/work" element={<Work />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/careers" element={<Careers />} />
-                <Route path="/contact" element={<Contact />} />
-              </Routes>
-            </main>
+              <main id="main" className="bg-black">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/work" element={<Work />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/careers" element={<Careers />} />
+                  <Route path="/contact" element={<Contact />} />
+                </Routes>
+              </main>
 
-            <div className="bg-black">
-              <Footer />
-            </div>
-          </>
-        )}
-      </TransitionProvider>
-    </PageLoader>
+              <div className="bg-black">
+                <Footer />
+              </div>
+            </>
+          )}
+        </TransitionProvider>
+      </PageLoader>
+    </>
   );
 }
 

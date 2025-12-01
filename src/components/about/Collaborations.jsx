@@ -24,7 +24,7 @@ export default function Collaborations({ filters, categories }) {
   return (
     <div className="container">
       {/* filters */}
-      <div className="logos-filter text-[11px] space-mono">
+      <div className="logos-filter text-[11px] space-mono hoverable">
         <ul className="flex flex-wrap gap-[4px] mt-[24px]">
           {filters.map((filter) => (
             <li key={filter}>

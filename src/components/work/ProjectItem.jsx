@@ -16,6 +16,8 @@ export default function ProjectItem({ item, index, visible }) {
       {visible && (
         <motion.a
           data-orientation={item.orientation}
+          data-title={item.title}
+          data-subtitle={item.subtitle}
           className={`project-item ${gridClass} group relative overflow-hidden bg-gray-700`}
           variants={variants}
           initial="hidden"

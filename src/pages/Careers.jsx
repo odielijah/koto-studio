@@ -55,7 +55,7 @@ export default function Careers() {
               Sound like your thing? Join our team.
             </h1>
             <button
-              className="inline-flex text-white space-mono uppercase text-[12px] items-center gap-[1em] border-[1px] p-[20px] rounded-[9999em] transition-all duration-500 cursor-pointer hover:bg-white hover:text-black mt-[60px]"
+              className="hoverable inline-flex text-white space-mono uppercase text-[12px] items-center gap-[1em] border-[1px] p-[20px] rounded-[9999em] transition-all duration-500 cursor-pointer hover:bg-white hover:text-black mt-[60px]"
               onClick={() =>
                 document
                   .getElementById("current-openings")
@@ -170,7 +170,7 @@ export default function Careers() {
               {section.id === "benefits" && (
                 <>
                   {/* Benefits filter buttons */}
-                  <div className="flex gap-[4px] pb-[24px] flex-wrap">
+                  <div className="flex gap-[4px] pb-[24px] flex-wrap hoverable">
                     {Object.keys(benefitsData).map((filter) => (
                       <button
                         key={filter}

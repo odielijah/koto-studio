@@ -49,7 +49,7 @@ export default function PageTransition({ children }) {
       initial="initial"
       animate="animate"
       exit="exit"
-      className="fixed inset-0 bg-[#ffe800] z-[100] flex items-center justify-center"
+      className="fixed inset-0 bg-[#ffe800] z-[9999] flex items-center justify-center"
     >
       {/* Logo appears after bg animation */}
       <motion.img

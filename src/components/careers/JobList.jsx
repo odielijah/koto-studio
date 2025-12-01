@@ -16,7 +16,7 @@ export default function JobList({ jobs }) {
               {job.type}
             </p>
           </div>
-          <button className="space-mono flex gap-1 items-center text-[11px] uppercase border border-white/40 text-white px-[14px] py-[6px] rounded-[9999em] cursor-pointer hover:bg-white hover:text-black transition-all duration-300">
+          <button className="hoverable space-mono flex gap-1 items-center text-[11px] uppercase border border-white/40 text-white px-[14px] py-[6px] rounded-[9999em] cursor-pointer hover:bg-white hover:text-black transition-all duration-300">
             Apply
             <svg
               xmlns="http://www.w3.org/2000/svg"

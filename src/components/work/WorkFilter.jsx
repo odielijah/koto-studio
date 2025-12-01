@@ -45,7 +45,7 @@ export default function WorkFilter({
         </p>
 
         {/* Desktop/Main Filter */}
-        <p className="work-filter hoverable-content flex flex-wrap gap-6 text-[18px] gt-th mt-[4px]">
+        <p className="work-filter hoverable flex flex-wrap gap-6 text-[18px] gt-th mt-[4px]">
           {categories.map((cat) => (
             <a
               key={cat}

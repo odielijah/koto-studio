@@ -24,7 +24,7 @@ export default function JobFilter({
       .join(" ");
 
   return (
-    <div className="flex gap-[4px] pb-[24px] flex-wrap">
+    <div className="flex gap-[4px] pb-[24px] flex-wrap hoverable">
       {filters.map((filter) => {
         const isDropdown = sectionId === "current-openings" && filter !== "all";
         const isActive =

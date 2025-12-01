@@ -51,7 +51,7 @@ export default function Header({ trigger }) {
           <div className="nav-panel-logo outline-none">
             <button
               onClick={() => trigger("/")}
-              className="outline-none cursor-pointer"
+              className="outline-none cursor-pointer hoverable"
             >
               <img
                 src={kotoLogo}
@@ -77,7 +77,7 @@ export default function Header({ trigger }) {
                 <li key={link.name} className="relative group">
                   <button
                     onClick={() => !isActive && trigger(link.path)} // disable click if active
-                    className={`relative pb-1 transition-colors duration-300 uppercase cursor-pointer ${
+                    className={`hoverable relative pb-1 transition-colors duration-300 uppercase cursor-pointer ${
                       isActive
                         ? "text-white pointer-events-none"
                         : "hover:text-gray-300"
@@ -86,7 +86,7 @@ export default function Header({ trigger }) {
                     {link.name}
                     <span
                       className={`absolute left-0 bottom-0 h-[1px] bg-white transition-all duration-300 ${
-                        isActive ? "w-full" : "w-0 group-hover:w-full"
+                        isActive ? "w-full" : ""
                       }`}
                     />
                   </button>

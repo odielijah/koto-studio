@@ -40,7 +40,7 @@ export default function Footer() {
           {footerLinks.map((link, index) => {
             return (
               <li key={index}>
-                <a href={link.url}>
+                <a href={link.url} className="hoverable">
                   <i>
                     <ArrowIcon />
                   </i>
@@ -61,7 +61,7 @@ export default function Footer() {
               {footerLegalLinks.map((link, index) => {
                 return (
                   <li key={index}>
-                    <a href={link.url}>{link.name}</a>
+                    <a href={link.url} className="hoverable">{link.name}</a>
                   </li>
                 );
               })}

@@ -13,7 +13,7 @@ function renderFeed() {
       viewport={{ once: true }}
     >
       <div className="feed">
-        <a className="cursor-view" href="#">
+        <a className="cursor-read" href="#">
           <div className="video-box">
             {feedPost.type === "video" && (
               <video
@@ -40,7 +40,7 @@ function renderFeed() {
         />
         {feedPost.link && (
           <div
-            className="feed-link"
+            className="feed-link hoverable"
             dangerouslySetInnerHTML={{ __html: feedPost.link }}
           />
         )}

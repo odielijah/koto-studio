@@ -8,7 +8,7 @@ export default function BenefitsAccordion({
       {benefits.map((item, i) => (
         <div
           key={i}
-          className="border-t-[1px] border-[rgba(255,255,255,0.2)] text-white max-w-[600px]"
+          className="border-t-[1px] border-[rgba(255,255,255,0.2)] text-white max-w-[600px] hoverable"
         >
           <div
             className="flex items-center cursor-pointer py-[20px]"

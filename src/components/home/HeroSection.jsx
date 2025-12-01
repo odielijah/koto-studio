@@ -20,12 +20,12 @@ export default function HeroSection({ nextSectionRef }) {
         <div className="container text-left">
           <p className="gt-th text-[51px] max-[320px]:text-[32px] max-md:text-[38px] font-[300] max-w-[1200px] mx-auto z-[99] tracking-[-.64px] leading-[1.2]">
             <span>Optimists building</span>{" "}
-            <span className="underline-animate">brand</span> <span>and</span>{" "}
-            <span className="underline-animate">digital</span>
+            <span className="underline-animate hoverable">brand</span> <span>and</span>{" "}
+            <span className="underline-animate hoverable">digital</span>
             <span> for the most impactful</span>{" "}
-            <span className="underline-animate">companies</span>{" "}
+            <span className="underline-animate hoverable">companies</span>{" "}
             <span>of today and the </span>
-            <span className="underline-animate">founders</span>{" "}
+            <span className="underline-animate hoverable">founders</span>{" "}
             <span>defining tomorrow.</span>
           </p>
 
