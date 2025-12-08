@@ -160,7 +160,6 @@ export default function HeroImages({ activePack }) {
                         >
                           <div className="img-box-inner">
                             <img src={img.src} alt="" />
-                            <p className="caption">some caption</p>
                           </div>
                         </div>
                       ))}
