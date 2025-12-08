@@ -305,19 +305,20 @@
   .img-box.vertical-alt {
     width: 36vw;
     max-width: unset;
-    background: #c3a0a0;
+    background: #fff;
   }
   .img-box.horizontal {
     max-width: unset;
     width: 56vw;
-    background: #634d4d;
+    background: #fff;
   }
   .img-box.horizontal-alt {
     height: 36vw;
     max-width: unset;
-    background: #787878;
+    background: #fff;
   }
   .img-box.square {
+    background: #fff;
     max-width: unset;
     width: 56vw;
   }
@@ -327,17 +328,6 @@
 
   .img-box-inner {
     position: relative;
-  }
-  .img-box .caption {
-    position: absolute;
-    top: 0;
-    right: -20px;
-    transform: rotate(90deg);
-    transform-origin: top right;
-    white-space: nowrap;
-    font-size: 10px;
-    line-height: 1;
-    color: #fff;
   }
 
   @keyframes pack-loop {
