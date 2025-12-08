@@ -187,6 +187,16 @@
   background: #fff;
 }
 
+.dimmed {
+  opacity: 0.5;
+  filter: brightness(0.15);
+  transition: filter 0.25s ease-in-out;
+}
+.hero-text.has-hover > span:not(.underline-animate) {
+  filter: brightness(0.35);
+  transition: filter 0.25s ease;
+}
+
 .img-wrapper {
   position: absolute;
   pointer-events: none;

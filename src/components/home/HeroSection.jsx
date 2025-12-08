@@ -24,8 +24,11 @@ export default function HeroSection({ nextSectionRef }) {
 
   // Reset both hoveredCategory and activePack
   const handleLeave = () => {
-    setHoveredCategory(null);
-    setActivePack({ category: null, segment: null });
+    if (!isMobile) {
+      setHoveredCategory(null);
+      setActivePack({ category: null, segment: null });
+    }
+    // On mobile, keep hoveredCategory active when activePack is set
   };
 
   const scrollToNextSection = () => {
@@ -76,7 +79,7 @@ export default function HeroSection({ nextSectionRef }) {
         <HeroImages activePack={activePack} />
 
         <div className="container text-left">
-         <p className="gt-th text-[52px] max-md:text-[38px] max-[350px]:!text-[32px] max-md:leading-[1.2] font-[300] max-w-[1200px] !z-[10] tracking-[-.64px] leading-[1.1]">
+          <p className="gt-th text-[52px] max-md:text-[38px] max-[350px]:!text-[32px] max-md:leading-[1.2] font-[300] max-w-[1200px] !z-[10] tracking-[-.64px] leading-[1.1]">
             <span className={hoveredCategory ? "dimmed" : ""}>
               Optimists building{" "}
             </span>
@@ -86,9 +89,12 @@ export default function HeroSection({ nextSectionRef }) {
               )}`}
               onMouseEnter={() => !isMobile && setHoveredCategory("brand")}
               onMouseLeave={() => !isMobile && handleLeave()}
-              onClick={() =>
-                isMobile && setActivePack({ category: "brand", segment: "all" })
-              }
+              onClick={() => {
+                if (isMobile) {
+                  setHoveredCategory("brand");
+                  setActivePack({ category: "brand", segment: "all" });
+                }
+              }}
             >
               brand
               <span className="triggers">
@@ -119,10 +125,12 @@ export default function HeroSection({ nextSectionRef }) {
               )}`}
               onMouseEnter={() => !isMobile && setHoveredCategory("digital")}
               onMouseLeave={() => !isMobile && handleLeave()}
-              onClick={() =>
-                isMobile &&
-                setActivePack({ category: "digital", segment: "all" })
-              }
+              onClick={() => {
+                if (isMobile) {
+                  setHoveredCategory("digital");
+                  setActivePack({ category: "digital", segment: "all" });
+                }
+              }}
             >
               digital
               <span className="triggers">
@@ -149,10 +157,12 @@ export default function HeroSection({ nextSectionRef }) {
               )}`}
               onMouseEnter={() => !isMobile && setHoveredCategory("companies")}
               onMouseLeave={() => !isMobile && handleLeave()}
-              onClick={() =>
-                isMobile &&
-                setActivePack({ category: "companies", segment: "all" })
-              }
+              onClick={() => {
+                if (isMobile) {
+                  setHoveredCategory("companies");
+                  setActivePack({ category: "companies", segment: "all" });
+                }
+              }}
             >
               companies
               <span className="triggers">
@@ -185,10 +195,12 @@ export default function HeroSection({ nextSectionRef }) {
               )}`}
               onMouseEnter={() => !isMobile && setHoveredCategory("founders")}
               onMouseLeave={() => !isMobile && handleLeave()}
-              onClick={() =>
-                isMobile &&
-                setActivePack({ category: "founders", segment: "all" })
-              }
+              onClick={() => {
+                if (isMobile) {
+                  setHoveredCategory("founders");
+                  setActivePack({ category: "founders", segment: "all" });
+                }
+              }}
             >
               founders
               <span className="triggers">
@@ -230,6 +242,7 @@ export default function HeroSection({ nextSectionRef }) {
               // Mobile: if images are open -> close them
               if (activePack.category) {
                 setActivePack({ category: null, segment: null });
+                setHoveredCategory(null); // Add this line
                 return;
               }
 
