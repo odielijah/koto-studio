@@ -56,6 +56,7 @@ I built it as a single-page application (SPA) to show how I can turn a professio
 
 ## How to Run Locally
 - Clone the repository: `git clone https://github.com/odielijah/koto-studio.git`
+- Navigate into the folder: `cd studio-koto`
 - Install dependencies: `npm install`
 - Run the development server: `npm run dev`
 - Open `https://localhost:5173` in your browser
