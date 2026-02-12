@@ -62,5 +62,7 @@ I built it as a single-page application (SPA) to show how I can turn a professio
 - Open `https://localhost:5173` in your browser
 
 ## Preview
+![koto](https://github.com/user-attachments/assets/70ef9ad7-0851-48bc-bd08-659aee60a490)
+
 
 
