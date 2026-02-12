@@ -55,7 +55,7 @@ I built it as a single-page application (SPA) to show how I can turn a professio
 - **The Solution:* I used a hybrid approach. I used Tailwind CSS for the layout, spacing, and colors to keep development fast. For the complex, custom motion effects (like the Hero overlays and Swiper custom navigation), I wrote focused CSS files to gain pixel-perfect control over the design.
 
 ## How to Run Locally
-- Clone the repository: `git clone https://github.com/odielijah/koto-studio.git`
+- Clone the repository: `git clone https://github.com/odielijah/studio-koto.git`
 - Navigate into the folder: `cd studio-koto`
 - Install dependencies: `npm install`
 - Run the development server: `npm run dev`
