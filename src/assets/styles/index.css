@@ -3,24 +3,24 @@
 
 @font-face {
   font-family: "GT Walsheim Rg";
-  src: url("../fonts/GTWalsheimTrial-Rg.woff2") format("woff2"),
-    url("../fonts/GTWalsheimTrial-Rg.woff") format("woff");
+  src: url("/fonts/GTWalsheimTrial-Rg.woff2") format("woff2"),
+    url("/fonts/GTWalsheimTrial-Rg.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "GT Walsheim Lt";
-  src: url("../fonts/GTWalsheimTrial-Lt.woff2") format("woff2"),
-    url("../fonts/GTWalsheimTrial-Lt.woff") format("woff");
+  src: url("/fonts/GTWalsheimTrial-Lt.woff2") format("woff2"),
+    url("/fonts/GTWalsheimTrial-Lt.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "GT Walsheim Th";
-  src: url("../fonts/GTWalsheimTrial-Th.woff2") format("woff2"),
-    url("../fonts/GTWalsheimTrial-Th.woff") format("woff");
+  src: url("/fonts/GTWalsheimTrial-Th.woff2") format("woff2"),
+    url("/fonts/GTWalsheimTrial-Th.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
